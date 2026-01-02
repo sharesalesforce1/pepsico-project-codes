@@ -1,0 +1,18 @@
+<template>
+  <lightning-card>
+    <div class="slds-var-p-around_medium">
+          <lightning-carousel>
+            <template for:each={carouseldetails} for:item="item">
+                 <lightning-carousel-image
+                   key={item.src}
+                   src={item.src}
+                   header={item.header}
+                   description={item.description}
+                 >         
+                 </lightning-carousel-image>
+            </template>
+              
+          </lightning-carousel>
+    </div>
+  </lightning-card>
+</template>

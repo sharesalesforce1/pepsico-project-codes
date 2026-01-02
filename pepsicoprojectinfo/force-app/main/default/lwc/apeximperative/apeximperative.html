@@ -1,0 +1,16 @@
+<template>
+  <lightning-card>
+    <div class="slds-var-p-around_medium">
+        <lightning-button label="show accounts" onclick={onshowclickinfo}></lightning-button>
+        <lightning-button label="hide accounts" onclick={onhideclickinfo}></lightning-button>
+    </div>
+
+    <template if:true={showaccounts}>
+        <template for:each={accountslist} for:item="acc">
+            <div key={acc.Id}>
+                {acc.Name}
+            </div>
+        </template>
+    </template>
+  </lightning-card>
+</template>

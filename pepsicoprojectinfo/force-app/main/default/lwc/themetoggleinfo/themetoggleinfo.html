@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">My Salesforce App</div>
+
+            <button class="theme-toggle" onclick={toggleTheme}>
+                <template if:true={isDark}>
+                    🌙
+                </template>
+                <template if:false={isDark}>
+                    ☀️
+                </template>
+            </button>
+        </header>
+
+        <!-- CONTENT -->
+        <section class="hero">
+            <h1>
+                <em>open</em> to your learning
+            </h1>
+            <p>
+                Guiding you to achieve your financial endeavors
+            </p>
+        </section>
+    </div>
+    </lightning-card>
+</template>

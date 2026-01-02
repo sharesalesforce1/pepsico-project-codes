@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Data table with Wire">
+    <lightning-datatable
+      key-field="Id"
+      data={conData}
+      columns={col}
+      onsave={handleSave}
+      draft-values={draftValues}
+    ></lightning-datatable>
+  </lightning-card>
+</template>

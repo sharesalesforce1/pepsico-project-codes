@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>hiringmanager_name_cannot_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( hrname__c )</errorConditionFormula>
+    <errorDisplayField>hrname__c</errorDisplayField>
+    <errorMessage>hrname cannot be changed</errorMessage>
+</ValidationRule>

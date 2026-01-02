@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="apex imperative call">
+      <lightning-button label="show accounts" onclick={onshowclickrecords}></lightning-button>
+
+      <lightning-button label="hide accounts" onclick={onhideclickrecords}></lightning-button>
+
+      <template if:true={showaccounts}>
+        <template for:each={accountslist} for:item="acc">
+             <div key={acc.Id}>
+                {acc.Name}
+             </div>
+        </template>
+      </template>
+  </lightning-card>
+</template>

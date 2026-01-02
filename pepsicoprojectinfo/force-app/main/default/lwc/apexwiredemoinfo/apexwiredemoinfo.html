@@ -1,0 +1,31 @@
+<template>
+   <lightning-card title="apex wire to property">
+      <div class="slds-p-around_medium">
+          <template if:true={contacts.data}>
+            <template for:each={contacts.data} for:item="con">
+                <div key={con.Id} class="slds-box slds-box_x-small">
+                    <p><strong>Name:</strong>{con.Name}</p>
+                    <p><strong>LeadSource:</strong>{con.LeadSource}</p>
+                    <p><strong>Department:</strong>{con.Department}</p>
+                </div>
+                 
+            </template>
+          </template>
+      </div>
+   </lightning-card>
+
+    <lightning-card title="apex wire to function">
+      <div class="slds-p-around_medium">
+          <template if:true={contactslist}>
+            <template for:each={contactslist} for:item="con">
+                <div key={con.Id} class="slds-box slds-box_x-small">
+                    <p><strong>Name:</strong>{con.Name}</p>
+                    <p><strong>LeadSource:</strong>{con.newtype}</p>
+                    <p><strong>Department:</strong>{con.Department}</p>
+                </div>
+                 
+            </template>
+          </template>
+      </div>
+   </lightning-card>
+</template>

@@ -1,0 +1,78 @@
+<apex:page showHeader="false" sidebar="false" standardController="Account">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 20px;
+        }
+
+        .page-title {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 20px;
+            font-weight: bold;
+            color: #34495e;
+            margin-top: 20px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .address-output {
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        table.apex-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .apex-table th, .apex-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+
+    <div class="page-title">Account Registration Overview</div>
+
+    <apex:pageBlock title="General Information" mode="edit">
+        <apex:pageBlockSection columns="1">
+            <apex:outputField value="{!Account.Name}"/>
+            <apex:outputField value="{!Account.Phone}"/>
+            <apex:outputField value="{!Account.Rating}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Contact Information">
+        <div class="section-heading">Contacts</div>
+        <apex:pageBlockTable value="{!Account.Contacts}" var="ac" styleClass="apex-table">
+            <apex:column value="{!ac.FirstName}" headerValue="First Name"/>
+            <apex:column value="{!ac.LastName}" headerValue="Last Name"/>
+            <apex:column value="{!ac.Email}" headerValue="Email"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Cases and Opportunities">
+        <div class="section-heading">Related Lists</div>
+        <apex:relatedList list="Cases"/>
+        <apex:relatedList list="Opportunities"/>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Address Details">
+        <div class="section-heading">Billing Address</div>
+        <div class="address-output">
+            <apex:outputText value="{!Account.BillingStreet}"/><br/>
+            <apex:outputText value="{!Account.BillingCity}, {!Account.BillingState}, {!Account.BillingPostalCode}"/><br/>
+            <apex:outputText value="{!Account.BillingCountry}"/>
+        </div>
+    </apex:pageBlock>
+</apex:page>

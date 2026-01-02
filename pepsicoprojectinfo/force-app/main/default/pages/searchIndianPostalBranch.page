@@ -1,0 +1,27 @@
+<apex:page controller="SearchIndianPostalBranchController" setup="false" sidebar="false" showheader="true" tabStyle="Contact">
+    <apex:sectionHeader title="Postal" subtitle="Postal Branches"/>
+    <apex:form >
+        <apex:PageBlock title="Postal Branches block">
+            <apex:pageBlockSection title="Search branches" columns="2" collapsible="true">
+                <apex:inputtext label="Enter Postal Pin Code: " html-placeholder="Enter Pin Code" value="{!postalPinCode}"/>
+                <apex:commandButton value="Search branches" action="{!SearchPostalBranches}" rerender="pgBlock"/>
+            </apex:pageBlockSection>
+            
+            <apex:Pageblock title="Postal Branches : ({!lstBranches.Size})" id="pgBlock">
+                <apex:pageblockTable value="{!lstBranches}" var="br">
+                    
+                    <apex:column value="{!br.name}" headerValue="Name"/>
+                    <apex:column value="{!br.BranchType}" headerValue="BranchType"/>
+                    <apex:column value="{!br.DeliveryStatus}" headerValue="DeliveryStatus"/>
+                    <apex:column value="{!br.Circle}" headerValue="Circle"/>
+                    <apex:column value="{!br.District}" headerValue="District"/>
+                    <apex:column value="{!br.Division}" headerValue="Division"/>
+                    <apex:column value="{!br.Region}" headerValue="Region"/>
+                    <apex:column value="{!br.State}" headerValue="State"/>
+                    <apex:column value="{!br.Country}" headerValue="Country"/>
+                </apex:pageblockTable>
+                
+            </apex:pageBlock>
+        </apex:PageBlock>
+    </apex:form>
+</apex:page>

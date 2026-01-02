@@ -1,0 +1,44 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false" tabStyle="Account">
+    <apex:form >
+      <apex:pageBlock title="Account edit">
+          <apex:pageBlockButtons location="Both">
+            <apex:commandButton value="Save" action="{!Save}"></apex:commandButton>
+            <apex:commandButton value="Save & New" action="{!Save}"></apex:commandButton>
+            <apex:commandButton value="Cancel" action="{!Cancel}"></apex:commandButton>
+          </apex:pageBlockButtons>
+          
+          <apex:pageBlockSection title="Account information" columns="2" collapsible="true">
+              <apex:inputField value="{!Account.Name}"/>
+              <apex:inputField value="{!Account.Rating}" required="true"/>
+              <apex:inputField value="{!Account.Annualrevenue}"/>
+              <apex:inputField value="{!Account.Type}"/>
+              <apex:inputField value="{!Account.Ownership}"/>
+              <apex:inputField value="{!Account.Site}"/>
+              <apex:inputField value="{!Account.Website}"/>
+          </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Contact information" columns="2" collapsible="true">
+              <apex:inputField value="{!Account.Phone}"/>
+              <apex:inputField value="{!Account.Fax}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Address information" columns="2" collapsible="true">
+              <apex:inputField value="{!Account.BillingStreet}"/>
+              <apex:inputField value="{!Account.ShippingStreet}"/>
+              <apex:inputField value="{!Account.BillingCity}"/>
+              <apex:inputField value="{!Account.ShippingCity}"/>
+              <apex:inputField value="{!Account.BillingState}"/>
+              <apex:inputField value="{!Account.ShippingState}"/>
+              <apex:inputField value="{!Account.BillingPostalCode}"/>
+              <apex:inputField value="{!Account.ShippingPostalCode}"/>
+              <apex:inputField value="{!Account.BillingCountry}"/>
+              <apex:inputField value="{!Account.ShippingCountry}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Additional information" columns="2" collapsible="true">
+              <apex:inputField value="{!Account.Active__c}"/>
+              <apex:inputField value="{!Account.CustomerPriority__c}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,21 @@
+<template>
+ <lightning-card>
+    <div class="slds-var-p-around_medium">
+        <template for:each={carList} for:item="car">
+            <ul key={car} class="slds-box slds-box_xx-small">
+                <li class="slds-item">{car}</li>
+            </ul>
+        </template>
+    </div>
+ </lightning-card>
+
+ <lightning-card title="iterator">
+    <div class="slds-var-p-around_medium">
+        <template for:each={ceoList} for:item="list">
+            <ul key={list.id} class="slds-box slds-box_xx-small">
+                <li class="slds-item">{list.name}=>{list.company}</li>
+            </ul>
+        </template>
+    </div>
+ </lightning-card>
+</template>

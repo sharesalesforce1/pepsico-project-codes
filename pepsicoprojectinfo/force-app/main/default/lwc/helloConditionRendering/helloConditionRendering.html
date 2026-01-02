@@ -1,0 +1,14 @@
+<template>
+     <lightning-card title="condition rendering">
+           <lightning-button variant="brand" label="show me" onclick={handleme}></lightning-button>
+          <template if:true={isdeclared}>
+              <p>First i started the html,css and js.Later i started with lwc installation
+               part.Then i started with lwc basics and will learn all the things further
+              </p>
+          </template>
+
+          <template if:false={isdeclared}>
+               <p>content cannot be shown.click the above button.</p>
+          </template>
+     </lightning-card>
+</template>

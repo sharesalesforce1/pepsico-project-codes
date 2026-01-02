@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Hiringmanager</fullName>
+    <active>true</active>
+    <label>IT Hiringmanager</label>
+    <picklistValues>
+        <picklist>Designation__c</picklist>
+        <values>
+            <fullName>Automation tester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dotnet developer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Executive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Java developer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual tester</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce developer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location__c</picklist>
+        <values>
+            <fullName>Bangalore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chennai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hyderabad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mumbai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pune</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

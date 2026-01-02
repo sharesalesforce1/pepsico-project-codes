@@ -1,0 +1,15 @@
+<template>
+  <lightning-card>
+    <div class="slds-var-p-around_medium">
+
+        <lightning-button label="Show data" variant="brand" onclick={showinfo}></lightning-button>
+        <template if:true={isdeclared}>
+           <p class="info-text">Lwc is most important in salesforce series.Please learn this and clarify your queries</p>
+        </template>
+
+        <template if:false={isdeclared}>
+            <p class="warning-text">You cant see the data.Please click a button</p>
+        </template>
+    </div>
+  </lightning-card>
+</template>

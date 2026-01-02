@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="view the data">
+     <lightning-record-view-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+     >
+
+     <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_4-of-12">
+           <lightning-output-field field-name={fields.name}></lightning-output-field>
+           <lightning-output-field field-name={fields.phone}></lightning-output-field>
+           <lightning-output-field field-name={fields.industry}></lightning-output-field>
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+               <lightning-output-field field-name={fields.annualrevenuefield}></lightning-output-field>
+               <lightning-output-field field-name={fields.faxField}></lightning-output-field>
+               <lightning-output-field field-name={fields.websiteField}></lightning-output-field>
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+                <lightning-output-field field-name={fields.activeField}></lightning-output-field>
+        </div>
+     </div>
+     </lightning-record-view-form>
+  </lightning-card>
+</template>

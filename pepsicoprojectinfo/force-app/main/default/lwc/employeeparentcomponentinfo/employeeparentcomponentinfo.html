@@ -1,0 +1,14 @@
+<template>
+  <lightning-card>
+      <p>**child component**</p>
+   <c-employeechildcomponentinfo onemployeedet={handlevent}></c-employeechildcomponentinfo>
+
+   <p>**Parent component**</p>
+   Employee name entered in child component : {empname} <br/>
+   Employee Phone entered in child component: {empphone} <br/>
+   Employee city entered in child component: {empcity} <br/>
+
+   <lightning-datatable key-field="Id" data={empdetails} columns={columns}></lightning-datatable>
+  </lightning-card>
+  
+</template>
