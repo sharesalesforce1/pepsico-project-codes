@@ -1,0 +1,25 @@
+import { LightningElement,wire } from 'lwc';
+import SAMPLEMC from "@salesforce/messageChannel/SampleMessageChannelInfo__c"
+import {APPLICATION_SCOPE,publish,subscribe,unsubscribe,MessageContext} from 'lightning/messageService';
+
+export default class Lwccomponentainfo extends LightningElement {
+  @wire(MessageContext)context;
+  inputvalue
+
+  changehandler(event)
+  {
+    this.inputvalue=event.target.value
+  }
+
+  publishhandler()
+  {
+
+    const message={
+        lmsData:{
+            value:this.inputvalue
+        }
+    }
+    publish(this.context,SAMPLEMC,message)
+
+  }
+}

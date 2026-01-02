@@ -1,0 +1,60 @@
+/* ---------- GLOBAL THEMES ---------- */
+:host {
+    display: block;
+}
+
+/* Light Theme */
+.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --header-bg: #9b174c;
+    --button-bg: #ffffff;
+    --accent-color: #9b174c;
+}
+
+/* Dark Theme */
+.dark-theme {
+    --bg-color: #0f0f0f;
+    --text-color: #ffffff;
+    --header-bg: #000000;
+    --button-bg: #1f1f1f;
+    --accent-color: #6df2b3;
+}
+
+/* ---------- PAGE ---------- */
+.page-wrapper {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    background-color: var(--header-bg);
+    color: #fff;
+    padding: 16 measuring px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- TOGGLE BUTTON ---------- */
+.theme-toggle {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ---------- CONTENT ---------- */
+.hero {
+    padding: 60px 40px;
+}
+
+.hero em {
+    color: var(--accent-color);
+    font-style: italic;
+}

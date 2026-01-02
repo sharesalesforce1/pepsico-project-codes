@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Account">
+        <lightning-input 
+            label="Acc name" 
+            value={accName} 
+            onchange={handleChange} 
+            data-field="accName">
+        </lightning-input>
+
+        <!-- Rating Picklist -->
+        <lightning-combobox
+            name="rating"
+            label="Rating"
+            value={rating}
+            placeholder="Select Rating"
+            options={ratingOptions}
+            onchange={handleChange}
+            data-field="rating">
+        </lightning-combobox>
+
+        <!-- Industry Picklist -->
+        <lightning-combobox
+            name="industry"
+            label="Industry"
+            value={industry}
+            placeholder="Select Industry"
+            options={industryOptions}
+            onchange={handleChange}
+            data-field="industry">
+        </lightning-combobox>
+
+        <lightning-input 
+            label="Phone" 
+            value={phone} 
+            onchange={handleChange} 
+            data-field="phone">
+        </lightning-input>
+
+        <lightning-input 
+            label="Fax" 
+            value={fax} 
+            onchange={handleChange} 
+            data-field="fax">
+        </lightning-input>
+        
+        <lightning-button variant="brand" label="Next" onclick={goNext}></lightning-button>
+    </lightning-card>
+</template>

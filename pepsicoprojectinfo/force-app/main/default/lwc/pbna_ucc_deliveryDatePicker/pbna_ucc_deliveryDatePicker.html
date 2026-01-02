@@ -1,0 +1,15 @@
+<template>
+ <lightning-card title="Delivery Date">
+        <lightning-input
+            class="slds-p-around_medium ios-input"
+            data-id="deliveryDate"
+            type="date"
+            name="deliveryDate"
+            label="Select the Delivery Date"
+            value={deliveryDate}
+            min={minDate}
+            max={maxDate}
+            onchange={handleDeliveryDateChange}>
+        </lightning-input>
+    </lightning-card>
+</template>

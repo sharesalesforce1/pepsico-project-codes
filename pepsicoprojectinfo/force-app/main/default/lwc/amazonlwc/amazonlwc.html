@@ -1,0 +1,53 @@
+<template>
+    <lightning-card variant="Narrow" class="slds-p-around_large main-container">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_medium">
+                <div class="badge slds-m-bottom_small">
+                    <lightning-icon icon-name="utility:favorite" size="xx-small" variant="inverse"></lightning-icon>
+                    <span class="slds-m-left_xx-small">New Seller Incentives</span>
+                </div>
+                
+                <h1 class="main-heading">Get started with $50,000 in incentives</h1>
+                <p class="slds-text-body_regular slds-m-vertical_medium sub-text">
+                    Ready to sell with us? As a new seller, you can take advantage of a series of incentives.
+                </p>
+
+                <div class="incentives-box slds-p-around_medium">
+                    <ul class="slds-list_dotted">
+                        <li class="slds-m-bottom_small">
+                            <strong>10% back</strong> on your first $50,000 in branded sales.
+                        </li>
+                        <li class="slds-m-bottom_small">
+                            <strong>$200 credit</strong> towards fulfillment costs.
+                        </li>
+                        <li class="slds-m-bottom_small">
+                            <strong>$400 credit</strong> for inbound placement costs.
+                        </li>
+                        <li class="slds-m-bottom_small">
+                            <strong>Free storage</strong> and customer returns with auto-enrollment.
+                        </li>
+                    </ul>
+                </div>
+                <p class="slds-text-body_small slds-m-top_medium disclaimer">
+                    *Terms and conditions apply. Limited to specific marketplaces.
+                </p>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-p-around_medium visual-container">
+                <img src={mainImage} alt="Seller using phone" class="hero-image" />
+                
+                <div class="floating-card">
+                    <div class="slds-media slds-media_center">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="utility:trending_up" size="small"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-title_bold">10% on branded sales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

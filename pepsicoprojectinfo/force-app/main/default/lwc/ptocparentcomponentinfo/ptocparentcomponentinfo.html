@@ -1,0 +1,21 @@
+<template>
+  <c-ptocalertcomponent
+    message="hurray!i got the data"
+    cardheading="parent to child component communication"
+    number=20
+    isvalid="true"
+  ></c-ptocalertcomponent>
+
+  <c-ptoccarouselcomponentinfo
+    carouseldetails = {carouselData}
+  ></c-ptoccarouselcomponentinfo>
+
+  <lightning-card>
+    <div class="slds-var-p-around_medium">
+      <lightning-input type="number" label="enter percentage" onkeyup={changehandler}>
+      </lightning-input>
+      <c-ptocprogresscomponent progressvalue={percentage}></c-ptocprogresscomponent>
+
+    </div>
+  </lightning-card>
+</template>

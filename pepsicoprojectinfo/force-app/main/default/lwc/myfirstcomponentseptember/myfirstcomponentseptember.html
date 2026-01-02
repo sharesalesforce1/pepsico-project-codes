@@ -1,0 +1,20 @@
+<template>
+  <lightning-card>
+      <h1>I am deployed this component from lwc studio</h1>
+      {fullname}
+  </lightning-card>
+
+  <lightning-card>
+    <div class="slds-var-p-around_medium">
+        <lightning-input type="text" label="enter the name" onkeyup={changehandler}></lightning-input>
+       <div>{fullname} is the cource of {title}</div>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="@track properties">
+       <div class="slds-var-p-around_medium">
+         <lightning-input type="text" label="enter city name" onkeyup={trackhandler}></lightning-input>
+         {address.city}
+       </div>
+  </lightning-card>
+</template>

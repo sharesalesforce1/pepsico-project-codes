@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <p>***parent component**</p>
+        <p>{cname}:{vol}</p>
+
+        <p>**child component**</p>
+        <c-volinfochild onincrease={handlevolincrease} ondecrease={handlevoldecrease}></c-volinfochild>
+    </lightning-card>
+</template>

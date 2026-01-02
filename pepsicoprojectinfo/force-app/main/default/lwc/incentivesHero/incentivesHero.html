@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-p-around_large">
+        <h2 class="section-title">Export to 18 Amazon global marketplaces</h2>
+        <div class="slds-grid slds-wrap slds-gutters">
+            <template for:each={regions} for:item="region">
+                <div key={region.name} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-m-bottom_medium">
+                    <div class="region-card">
+                        <div class="card-background" style={region.bgStyle}></div>
+                        <div class="card-content">
+                            <h3 class="region-name">{region.name}</h3>
+                            <p class="region-list">{region.countries}</p>
+                            <p class="region-desc slds-m-top_small">{region.description}</p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

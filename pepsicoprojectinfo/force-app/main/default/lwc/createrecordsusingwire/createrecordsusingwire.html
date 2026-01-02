@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="create records">
+     <div class="slds-p-around_medium">
+        <lightning-input type="text" name="FirstName" label="FirstName" onchange={changehandler} class="slds-m-bottom_x-small"></lightning-input>
+        <lightning-input type="text" name="LastName" label="LastName" onchange={changehandler} class="slds-m-bottom_x-small"></lightning-input>
+        <lightning-input type="text" name="Phone" label="Phone" onchange={changehandler} class="slds-m-bottom_x-small"></lightning-input>
+        <lightning-input type="text" name="Email" label="Email" onchange={changehandler} class="slds-m-bottom_x-small"></lightning-input>
+
+        <lightning-button label="submit" variant="brand" onclick={createcontact}></lightning-button>
+     </div>
+  </lightning-card>
+</template>

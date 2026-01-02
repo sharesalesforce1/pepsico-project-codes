@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="edit form">
+     <lightning-record-edit-form
+       object-api-name={objectName}
+       onsubmit={submithandler}
+       onsuccess={successhandler}
+     >
+     <lightning-input-field field-name={fields.nameField}></lightning-input-field>
+     <lightning-input-field field-name={fields.titleField}></lightning-input-field>
+     <lightning-input-field field-name={fields.phoneField}></lightning-input-field>
+     <lightning-input-field field-name={fields.emailField}></lightning-input-field>
+
+     <lightning-button label="cancel" onclick={handlereset}></lightning-button>
+     <lightning-button label="save" type="submit" variant="brand"></lightning-button>
+     </lightning-record-edit-form>
+  </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="apex wire with params">
+    <div class="slds-var-p-around_medium">
+         <lightning-combobox
+            name="leadsource"
+            label="choose your type"
+            value={selectedType}
+            placeholder="Select Progress"
+            options={typeoptions}
+            onchange={typehandler} ></lightning-combobox>
+    </div>
+
+    <template if:true={filteredcontacts.data}>
+        <template for:each={filteredcontacts.data} for:item="con">
+               <div class="slds-box slds-box_x-small" key={con.Id}>
+                    <p><strong>Name:</strong>{con.Name}</p>
+                    <p><strong>LeadSource:</strong>{con.LeadSource}</p>
+                    <p><strong>Department:</strong>{con.Department}</p>
+                </div>
+        </template>
+    </template>
+  </lightning-card>
+</template>

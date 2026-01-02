@@ -1,0 +1,17 @@
+<template>
+  <c-pcalertcomponent
+   message="Hurray!!i got the data"
+   cardheading="parent to child primitive data communication"
+   number=20
+   isvalid=true
+  ></c-pcalertcomponent>
+
+  <c-ptoccarouselcomponent
+   carouseldetails = {carouselData}
+  ></c-ptoccarouselcomponent>
+
+  <lightning-input type="number" label="enter data" onkeyup={changehandler}></lightning-input>
+  <c-ptocprogresscomponent
+  progressvalue={progressinfo} 
+  ></c-ptocprogresscomponent>
+</template>

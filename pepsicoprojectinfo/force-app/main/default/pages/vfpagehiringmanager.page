@@ -1,0 +1,19 @@
+<apex:page standardController="Hiringmanager__c" extensions="Hiringmanagerextension" showHeader="true" sidebar="false">
+    <apex:sectionHeader title="hiringmanager" subtitle="new hiringmanager"/>
+    <apex:form >
+      <apex:pageMessages id="errors"></apex:pageMessages>
+        
+       <apex:pageBlock title="hiringmanager edit">
+         <apex:pageBlockButtons location="bottom">
+             <apex:commandButton value="save" action="{!ValidateDuplicateHRRecords}"></apex:commandButton>
+             <apex:commandButton value="cancel" action="{!Cancel}"></apex:commandButton>
+         </apex:pageBlockButtons>
+           
+           <apex:pageBlockSection title="New hiringmanager" columns="2">
+             <apex:inputField value="{!Hiringmanager__c.hrname__c}" required="true"></apex:inputField>
+             <apex:inputField value="{!Hiringmanager__c.hrphone__c}"></apex:inputField>
+             <apex:inputField value="{!Hiringmanager__c.Location__c}"></apex:inputField>
+           </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

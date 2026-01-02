@@ -1,0 +1,23 @@
+<template>
+  <lightning-card>
+    <div class="slds-p-around_medium">
+        <lightning-input type="search" onkeyup={fetchbookshandler} label="search books" value={query}></lightning-input>
+    </div>
+
+    <lightning-layout>
+        <template if:true={books}>
+            <template for:each={books.items} for:item="book">
+                <lightning-layout-item key={book.Id} size="3" padding="around-small">
+                    <div class="slds-box slds-box_xx-small">
+                        <div><strong>{book.volumeInfo.title}</strong></div>
+                        <div><strong>{book.volumeInfo.publishedDate}</strong></div>
+                        <div><strong>{book.volumeInfo.pageCount}</strong></div>
+                         <div><strong>{book.volumeInfo.publisher}</strong></div>
+                    </div>
+                </lightning-layout-item>
+            </template>
+        </template>
+        
+    </lightning-layout>
+  </lightning-card>
+</template>
